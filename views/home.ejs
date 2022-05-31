@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Idea</title>
+    <script
+      src="https://kit.fontawesome.com/d60e865119.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Its an App</h1>
+      <p>What more do you want from me!?</p>
+    </header>
+
+    <section class="innerProfile">
+        <% if (user.local.email)  {%>
+            <p>
+            <strong>email</strong>: <%= user.local.email %><br>
+            <strong>password</strong>: <%= user.local.password %>
+            </p>
+            <% } %>
+            <a href="/logout" class="logOut"><button>Log-out</button></a>
+    </section>
+
+    <section id="ideaBox">
+      <% if (user.local.email) { %>
+      <form action="/stormBoard" method="POST">
+        <input
+          type="text"
+          class="info name"
+          name="name"
+          placeholder="Name"
+        />
+        <input
+          type="text"
+          class="info idea"
+          name="idea"
+          placeholder="Your bright idea"
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <% } %>
+    </section>
+
+    <section>
+        <ul class="ideaRecord">
+            <% for(var i=0; i<ideas.length; i++) {%>
+            
+              <li class="ideaList">
+                <span class="record name" ><%= ideas[i].name %></span>
+                <span class="record idea" ><%= ideas[i].idea %></span>
+                <span><i class="fa-solid fa-trash-can"></i></span>
+                <span><i class="fa-solid fa-circle-check"></i></span>
+                <span><i class="fa-solid fa-circle-xmark"></i></span>
+            </li>
+            
+            <% } %>
+            </ul>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
