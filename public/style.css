@@ -1,4 +1,106 @@
 * {
     box-sizing: border-box;
+    /* border: 1px solid black; */
+    font-family: 'Poppins', sans-serif;
 }
 
+/* ///// */
+/* landing page */
+
+header,
+main {
+    width: 80%;
+    margin: 0 10%;
+}
+
+main {
+    height: 25rem;
+    /* padding: 5rem 0; */
+}
+
+
+.login input,
+.signup input {
+    width: 50%;
+    height: 1.5rem;
+    margin: .5rem 0;
+}
+
+button {
+    display: block;
+}
+
+/* //////////////////////////////////////// */
+
+.innerProfile {
+    width: 37.5%;
+    height: 10rem;
+    margin-right: 2.5%;
+    margin-left: 10%;
+    padding: 0 1%;
+    float: left;
+    overflow: hidden;
+    border: 3px solid rgb(199, 105, 105);
+}
+
+#ideaBox {
+    width: 37.5%;
+    height: 10rem;
+    margin-right: 10%;
+    margin-left: 2.5%;
+    padding: 0 1%;
+    float: left;
+    border: 3px solid rgb(199, 105, 105);
+}
+
+#ideaBox input{
+    margin: 1rem 0 ;
+    display: block;
+}
+
+.idea {
+    height: 3rem;
+}
+
+.ideaHolder {
+    width: 80%;
+    margin: 0 10%;
+}
+
+.ideaRecord {
+    padding: 0;
+}
+
+.ideaList {
+    float: left;
+    list-style: none;
+    height: 25rem;
+    width: 20%;
+    margin: 1rem 2.5%;
+}
+
+.ideaList .name {
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.ideaList span {
+    font-size: 2rem;
+}
+
+.ideaList .fa-solid {
+    font-size: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+/* ///////// */
+/* approve and not approve */
+
+.green {
+    color:rgb(22, 124, 22);
+}
+
+.red {
+    color: rgb(148, 23, 48);
+}

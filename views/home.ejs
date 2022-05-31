@@ -7,18 +7,22 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      <h1>Its an App</h1>
-      <p>I ran out of ideas, help me think of one.</p>
+      <h1>Ok I Lied</h1>
+      <h3>I ran out of ideas, help me think of one.</h3>
     </header>
 
     <section class="innerProfile">
         <% if (user.local.email)  {%>
             <p>
-            <strong>email</strong>: <%= user.local.email %><br>
-            <strong>password</strong>: <%= user.local.password %>
+            <strong>Name</strong>: <%= user.local.name %><br>
+            <strong>Email</strong>: <%= user.local.email %>
+            
             </p>
             <% } %>
             <a href="/logout" class="logOut"><button>Log-out</button></a>
@@ -26,7 +30,7 @@
 
     <section id="ideaBox">
       <% if (user.local.email) { %>
-      <form action="/stormBoard" method="POST">
+      <form action="/stormBoard" method="POST" class="ideasForm">
         <input
           type="text"
           class="info name"
@@ -44,16 +48,16 @@
       <% } %>
     </section>
 
-    <section>
+    <section class="ideaHolder">
         <ul class="ideaRecord">
             <% for(var i=0; i<ideas.length; i++) {%>
             
               <li class="ideaList">
-                <span class="record name" ><%= ideas[i].name %></span>
-                <span class="record idea" ><%= ideas[i].idea %></span>
-                <span><i class="fa-solid fa-trash-can"></i></span>
+                <span class="record name" ><%= ideas[i].name %></span><br>
+                <span class="record idea" ><%= ideas[i].idea %></span><br>
                 <span><i class="fa-solid fa-circle-check"></i></span>
                 <span><i class="fa-solid fa-circle-xmark"></i></span>
+                <span><i class="fa-solid fa-trash-can"></i></span>
             </li>
             
             <% } %>

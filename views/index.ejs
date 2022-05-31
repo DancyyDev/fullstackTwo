@@ -4,14 +4,17 @@
     <title>Idea</title>
     <script src="https://kit.fontawesome.com/d60e865119.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>A Very Cool App Idea</h1>
     </header>
     <main class="landpage login">
-        <span><a href="./signup">No log in? Sign-up here!</a></span>
-        <form action="/login" method="post">
+        <span class="signupLink"><a href="./signup">No log in? Sign-up here!</a></span>
+        <form action="/login" method="post" class="form login">
             <h2>Log-in</h2>
             <input type="text" name="email" id="email" placeholder="Log-in Email">
             <input type="text" name="password" id="password" placeholder="Log-in Password">
