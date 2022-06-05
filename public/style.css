@@ -9,19 +9,29 @@
 
 header,
 main {
-    width: 80%;
+    width: 30%;
     margin: 0 10%;
+    padding: 1rem 1rem;
 }
 
 main {
     height: 25rem;
+    transition: .5s;
+    box-shadow: 0px 0px 0px rgb(255, 255, 255);
+    /* padding: 5rem 0; */
+}
+main:hover{
+    height: 25rem;
+    box-shadow: 10px -8px 0px rgb(253 230 138);
+    transition: .5s;
     /* padding: 5rem 0; */
 }
 
 
 .login input,
 .signup input {
-    width: 50%;
+    display: block;
+    width: 80%;
     height: 1.5rem;
     margin: .5rem 0;
 }
@@ -33,24 +43,34 @@ button {
 /* //////////////////////////////////////// */
 
 .innerProfile {
-    width: 37.5%;
+    width: 20%;
     height: 10rem;
     margin-right: 2.5%;
     margin-left: 10%;
     padding: 0 1%;
     float: left;
     overflow: hidden;
-    border: 3px solid rgb(199, 105, 105);
+    transition: .5s;
+    box-shadow: 0px 0px 0px rgb(255, 255, 255);
+}
+.innerProfile:hover {
+    transition: .5s;
+    box-shadow: 10px -8px 0px rgb(253 230 138);
 }
 
 #ideaBox {
-    width: 37.5%;
+    width: 20%;
     height: 10rem;
     margin-right: 10%;
     margin-left: 2.5%;
     padding: 0 1%;
     float: left;
-    border: 3px solid rgb(199, 105, 105);
+    transition: .5s;
+    box-shadow: 0px 0px 0px rgb(255, 255, 255);
+}
+#ideaBox:hover {
+    transition: .5s;
+    box-shadow: 10px -8px 0px rgb(253 230 138);
 }
 
 #ideaBox input{
@@ -65,6 +85,7 @@ button {
 .ideaHolder {
     width: 80%;
     margin: 0 10%;
+    clear:both;
 }
 
 .ideaRecord {
@@ -74,9 +95,17 @@ button {
 .ideaList {
     float: left;
     list-style: none;
-    height: 25rem;
+    /* height: 25rem; */
     width: 20%;
     margin: 1rem 2.5%;
+    border-top: 3px solid rgb(253 230 138);
+    border-right: 3px solid rgb(253 230 138);
+    transition: .5s;
+    box-shadow: 0px 0px 0px rgb(253 230 138);
+}
+.ideaList:hover {
+    transition: .5s;
+    box-shadow: 10px -8px 0px rgb(253 230 138);
 }
 
 .ideaList .name {
