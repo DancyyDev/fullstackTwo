@@ -94,7 +94,7 @@ button {
 
 .ideaList {
     float: left;
-    list-style: none;
+    list-style: none; 
     /* height: 25rem; */
     width: 20%;
     margin: 1rem 2.5%;
